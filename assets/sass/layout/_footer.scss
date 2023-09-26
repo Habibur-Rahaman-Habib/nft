@@ -1,0 +1,222 @@
+/* Footer Section */
+.nft-footer-area {
+    background-size: cover; 
+    background-repeat: no-repeat;
+    .footer-logo {
+        text-align: center; 
+        a {
+            img {
+                display: inline-block;
+                width: auto; 
+                max-width: 100%;
+            }
+        }
+    }
+    .nft-footer-top {
+        padding: 100px 0;
+    }
+    .nft-footer-widget {
+        &.ml-50 {
+            margin-left: 50px;
+        }
+        &.pr-60 {
+            padding-right: 60px;
+        }
+        .nft-footer-title {
+            h4 {
+                color: #fff;
+            }
+        }
+        .nft-footer-nav {
+            margin-top: 30px;
+            ul {
+                li {
+                    + li {
+                        margin-top: 8px;
+                    }
+                    a {
+                        color: #fff;
+                        text-transform: capitalize;
+                        position: relative;
+                        margin-left: -15px;
+                        transition: $transition;
+                        &::before {
+                            content: '//';
+                            opacity: 0;
+                            transition: $transition;
+                            margin-right: 5px;
+                        }
+                        &:hover {
+                            margin-left: 0; 
+                            color: $primary-color;
+                            &::before {
+                                opacity: 1;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nft-footer-address {
+            margin-top: 30px;
+            p {
+                color: #fff;
+            }
+        }
+        .nft-sub-txt {
+            margin-top: 20px;
+            p {
+                color: #fff;
+            }
+        }
+        .nft-footer-sb-form {
+            margin-top: 20px;
+            form {
+                width: 100%;
+                position: relative;
+                input[type="email"] {
+                    width: 100%;
+                    padding: 21px 20px;
+                    color: #B4B4B4; 
+                    font-size: 14px;
+                    background-color: #373744; 
+                    border-radius: 4px;
+                    border: 0;
+                }
+                button {
+                    background-color: $primary-color;
+                    border-radius: 4px; 
+                    color: #fff;
+                    padding: 8px 15px;
+                    position: absolute; 
+                    right: 10px; 
+                    top: 50%; 
+                    transform: translateY(-50%);
+                    font-weight: 500;
+                    transition: $transition;
+                    &:hover {
+                        background-color: $secondary-color;
+                    }
+                }   
+            }
+        }
+    }
+    .nft-footer-info {
+        border: 1px solid #58586A;
+        border-right: 0; 
+        border-left: 0;
+        padding: 25px 0;
+        .currency-info {
+            a {
+                color: #fff;
+                i {
+                    margin-right: 6px;
+                }
+            }
+        }
+        .nft-footer-social-info {
+            text-align: center;
+            a {
+                width: 30px; 
+                height: 30px; 
+                background-color: transparent; 
+                border: 1px solid $paragraph-color; 
+                color: $paragraph-color; 
+                border-radius: 50%; 
+                line-height: 30px; 
+                display: inline-block;
+                transition: $transition;
+                &:hover {
+                    background-color: $primary-color;
+                    color: #fff;
+                    border: 1px solid $primary-color;
+                }
+                + a {
+                    margin-left: 8px;
+                }
+            }
+        }
+        .nft-footer-info-links {
+            text-align: right;
+            a {
+                color: #fff;
+                transition: $transition;
+                &:hover {
+                    color: $primary-color;
+                }
+                + a {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .nft-footer-copyright {
+        padding: 30px;
+        text-align: center; 
+        p {
+            color: #fff;
+            font-weight: 500;
+            a {
+                color: #fff;
+                text-decoration: underline;
+                transition: $transition; 
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+        .nft-footer-top {
+            padding-bottom: 40px;
+        }
+        .nft-footer-widget {
+            margin-bottom: 60px;
+            &.ml-50 {
+                margin-left: 0;
+            }
+        }
+    }
+    @include small-screen {
+        .nft-footer-info {
+            .nft-footer-social-info {
+                text-align: right;
+                a {
+                    text-align: center;
+                }
+            }
+            .nft-footer-info-links {
+                text-align: left;
+            }
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 500px;
+        }
+        .nft-footer-info {
+            .currency-info {
+                text-align: left;
+            }
+            .nft-footer-social-info {
+                text-align: left;
+                margin-top: 15px;
+            }
+            .nft-footer-info-links {
+                text-align: left;
+                margin-top: 10px;
+            }
+        }
+        .nft-footer-copyright {
+            text-align: left;
+            padding: 30px 15px; 
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+    
+}

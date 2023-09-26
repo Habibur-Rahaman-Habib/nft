@@ -1,0 +1,65 @@
+/* Breadcrumb Section */
+.nft-breadcrumb {
+    padding: 205px 0 55px 0;
+    margin-top: -150px;
+    text-align: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: top center;
+    overflow: hidden;
+    .container {
+        position: relative;
+    }
+    .breadcrumb-shape {
+        position: absolute;
+        &.shape-1 {
+            left: 80px;
+            bottom: 0px;
+            animation: 20s nft-rotate linear infinite;
+        }
+        &.shape-2 {
+            left: 140px; 
+            bottom: 25px;
+            animation: 10s nft-ups-down linear infinite;
+        }
+        &.shape-3 {
+            right: 130px;
+            width: 100px;
+            animation: 10s nft-zoomInZoomOut linear infinite;
+        }
+        &.shape-4 {
+            right: -200px;
+            top: -100px;
+            animation: 20s nft-rotate linear infinite;
+        }
+        &.shape-2,
+        &.shape-3,
+        &.shape-4 {
+            @include portrait-phone {
+                display: none;
+            }
+        }
+        
+    }
+    .breadcrumb-title {
+        h2 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 44px;
+        }
+    }
+    .breadcrumb-meta {
+        margin-top: 12px;
+        p {
+            color: #fff;
+            text-transform: capitalize;
+            a {
+                color: #fff;
+                transition: $transition; 
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

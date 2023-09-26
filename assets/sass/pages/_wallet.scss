@@ -1,0 +1,53 @@
+/************ Wallets **********/ 
+.nft-wallets {
+    .nft-wallet-item {
+        background-color: #fff; 
+        border: 1px solid #CECECE; 
+        border-radius: 4px;
+        padding: 35px 15px 35px 30px;
+        box-shadow: 0 10px 18px rgba(0,0,0,0.07);
+        margin-bottom: 30px;
+        .wallet-top {
+            display: flex; 
+            align-items: center;
+            .wallet-title {
+                margin-left: 20px; 
+                h4 {
+                    font-weight: 600;
+                }
+            }
+        }
+        .wallet-desc {
+            margin-top: 20px;
+        }
+        .wallet-connect-btn {
+            margin-top: 15px;
+            a {
+                color: $paragraph-color; 
+                font-weight: 600;
+                text-transform: capitalize;
+                transition: $transition;
+                i {
+                    margin-left: 5px;
+                    transition: $transition;
+                }
+                &:hover {
+                    color: $primary-color;
+                    i {
+                        transform: translateX(6px);
+                    }
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 480px;
+        }
+    }
+}

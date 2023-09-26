@@ -1,0 +1,389 @@
+/************ Blog *************/ 
+.nft-blog-area {
+    .blog-content-part {
+        .blog-item {
+            + .blog-item {
+                margin-top: 40px;
+            }
+            .nft-blog-thumb {
+                padding-right: 5px;
+                overflow: hidden;
+                border-radius: 6px;
+                img {
+                    transition: $transition; 
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+            .blog-title {
+                h4 {
+                    transition: $transition; 
+                    font-weight: 600;
+                    text-transform: initial;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+            .blog-desc {
+                margin-top: 20px;
+            }
+            .blog-meta {
+                margin-top: 30px;
+                display: flex; 
+                align-items: center;
+                .blog-date {
+                    width: 50px; 
+                    display: inline-block; 
+                    background-color: $primary-color; 
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 4px;
+                    padding: 6px 0 3px 0;
+                    span {
+                        line-height: 1em;
+                        display: inline-block;
+                        font-size: 18px; 
+                        font-weight: 600;
+                    }
+                }
+                .blog-readmore {
+                    margin-left: 15px;
+                    a {
+                        color: $heading-color;
+                        font-weight: 600;
+                        text-transform: capitalize; 
+                        text-decoration: underline;
+                        transition: $transition; 
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .blog-pagination {
+            margin-top: 70px;
+        }
+    }
+    .sidebar-area {
+        .sidebar-widget {
+            .widget-title {
+                margin-bottom: 25px;
+                h5 {
+                    font-weight: 600;
+                }
+            }
+            + .sidebar-widget {
+                margin-top: 50px;
+            }
+        }
+        .search-widget {
+            .search-form {
+                form {
+                    width: 100%; 
+                    position: relative;
+                    input {
+                        width: 100%; 
+                        padding: 20px 60px 20px 30px;
+                        border-radius: 4px;
+                        background-color: #EDEDED; 
+                        border: 1px solid #EDEDED;
+                    }
+                    button {
+                        position: absolute;
+                        right: 20px;
+                        top: 50%; 
+                        transform: translateY(-50%);
+                        font-size: 20px;
+                        color: $paragraph-color;
+                    }
+                }
+            }
+        }
+        .category-widget {
+            ul {
+                li {
+                    display: block;
+                    a {
+                        display: block;
+                        color: $paragraph-color;
+                        padding: 8px 12px;
+                        border-radius: 4px;
+                        transition: $transition; 
+                        span {
+                            float: right;
+                        }
+                        &:hover {
+                            background-color: #EDEDED;
+                        }
+                    }
+                }
+            }
+        }
+        .post-widget {
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    + li {
+                        margin-top: 40px;
+                        &::before {
+                            content: ''; 
+                            position: absolute; 
+                            left: 0; 
+                            top: -20px; 
+                            width: 100%; 
+                            height: 1px; 
+                            background-color: #D4D4D4;
+                        }
+                    }
+                    .post-thumb {
+                        width: 105px;
+                        flex-shrink: 0;
+                        overflow: hidden;
+                        border-radius: 6px; 
+                        img {
+                            transition: $transition;
+                        }
+                        &:hover {
+                            img {
+                                transform: scale(1.03);
+                            }
+                        }
+                    }
+                    .post-content {
+                        margin-left: 20px;
+                        h6 {
+                            font-weight: 600;
+                            transition: $transition; 
+                            &:hover {
+                                color: $primary-color; 
+                            }
+                        }
+                        span {
+                            display: inline-block; 
+                            background-color: #EDEDED;
+                            font-size: 14px; 
+                            padding: 6px 10px;
+                            border-radius: 4px; 
+                            margin-top: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tags-widget {
+            .tags {
+                a {
+                    background-color: transparent; 
+                    border: 1px solid $paragraph-color; 
+                    border-radius: 30px; 
+                    display: inline-block;
+                    margin-bottom: 12px; 
+                    margin-right: 6px;
+                    padding: 7px 25px;
+                    color: $paragraph-color; 
+                    transition: $transition; 
+                    &:hover {
+                        background-color: $primary-color; 
+                        color: #fff;
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+        .sidebar-area {
+            margin-top: 60px;
+            .post-widget {
+                max-width: 400px;
+            }
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 480px;
+        }
+        .blog-content-part {
+            .blog-item {
+                .nft-blog-thumb {
+                    padding-right: 0;
+                }
+                .nft-blog-content {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+/************** Blog Details **************/ 
+.blog-details {
+    .blog-content-part {
+        .blog-title {
+            h4 {
+                font-weight: 600;
+            }
+        }
+        .blog-date {
+            span {
+                font-size: 14px; 
+                background-color: #EDEDED;
+                display: inline-block; 
+                padding: 5px 12px;
+                border-radius: 4px;
+            }
+        }
+        .blog-semi-title {
+            h6 {
+                font-weight: 600;
+            }
+        }
+        .blog-content-bottom {
+            margin-top: 30px;
+            ul {
+                li {
+                    display: inline-block;
+                    strong {
+                        font-size: 18px; 
+                        font-weight: 600;
+                        color: $heading-color;
+                    }
+                    a {
+                        color: $paragraph-color; 
+                        font-weight: 500;
+                        padding: 0 5px;
+                        display: inline-block;
+                        transition: $transition; 
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        .blog-comment-area {
+            margin-top: 30px;
+            .blog-comment-list {
+                ul {
+                    li {
+                        padding-right: 20px;
+                        display: flex;
+                        + li {
+                            margin-top: 60px;
+                            position: relative; 
+                            &::before {
+                                content: ''; 
+                                position: absolute; 
+                                top: -30px; 
+                                right: 0; 
+                                width: 87%; 
+                                height: 1px; 
+                                background-color: #D4D4D4;
+                            }
+                        }
+                        .clients_thumb {
+                            width: 80px;
+                            flex-shrink: 0;
+                            img {
+                                border-radius: 50%;
+                            }
+                        }
+                        .comment-content {
+                            margin-left: 20px;
+                            overflow: hidden;
+                            .top-content {
+                                overflow: hidden;
+                                h6 {
+                                    font-weight: 600;
+                                }
+                                span {
+                                    margin-top: 6px;
+                                    display: inline-block;
+                                }
+                                .reply-btn {
+                                    float: right;
+                                    transform: translateY(-20px);
+                                    a {
+                                        font-size: 14px;
+                                        color: $heading-color;
+                                        span {
+                                            margin-right: 6px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                @include portrait-phone {
+                    ul {
+                        li {
+                            display: block;
+                            padding-right: 0;
+                            + li {
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+                            .clients_thumb {
+                                margin-bottom: 20px;
+                            }
+                            .comment-content {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .blog-comment-form {
+                .blog-semi-title {
+                    h6 {
+                        color: #232323
+                    }
+                }
+                form {
+                    margin-top: 20px;
+                    label {
+                        display: block; 
+                        text-transform: capitalize;
+                        font-weight: 500; 
+                        color: #232323;
+                    }
+                    input,
+                    textarea {
+                        display: block; 
+                        width: 100%;
+                        margin-top: 10px;
+                        margin-bottom: 23px;
+                        padding: 22px 25px;
+                        border-radius: 4px;
+                        border: 1px solid #D4D4D4;
+                        font-size: 14px;
+                    }
+                    button {
+                        &:hover {
+                            background-color: $secondary-color; 
+                            transition: $transition;
+                        }
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

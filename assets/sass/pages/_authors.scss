@@ -1,0 +1,484 @@
+/********************* Authors **************************/ 
+.authors-area {
+    .authors-filter {
+        .authors-filter-left {
+            .select-item {
+                display: inline-block;
+                .nice-select {
+                    border: 0;
+                    span {
+                        text-transform: capitalize;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $paragraph-color;
+                    }
+                    .list {
+                        min-width: 130px;
+                    }
+                    &::after {
+                        right: 20px;
+                    }
+                }
+            }
+        }
+        .authors-filter-search {
+            text-align: right;
+            form {
+                label {
+                    position: relative;
+                    &::before {
+                        content: '\f002'; 
+                        position: absolute; 
+                        left: 18px; 
+                        top: 50%;
+                        transform: translateY(-50%); 
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                        z-index: 1;
+                    }
+                }
+                input[type="text"] {
+                    padding: 8px 15px 8px 40px;
+                    border: 1px solid #CECECE;
+                    border-radius: 30px;
+                    position: relative; 
+                }
+            }
+        }
+    }
+    .authors-lists {
+        margin-top: 40px;
+        .authors-single {
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            text-align: center;
+            padding-bottom: 25px;
+            border: 1px solid #CECECE;
+            border-radius: 5px;
+            transition: $transition;
+            margin-bottom: 30px;
+            .cover-photo {
+                img {
+                    transform: scale(1.06);
+                }
+            }
+            .follow-btn {
+                position: absolute; 
+                right: 10px;
+                top: 25px;
+                display: inline-block;
+                a {
+                    display: block; 
+                    background-color: $secondary-color;
+                    border-radius: 30px;
+                    font-size: 12px; 
+                    padding: 4px 12px;
+                    color: $heading-color;
+                    font-weight: 500;
+                    transition: $transition; 
+                    &:hover {
+                        background-color: $primary-color;
+                        color: #fff;
+                    }
+                }
+            }
+            .profile-pic {
+                margin-top: -56px;
+                .thumb-wrapper {
+                    display: inline-block; 
+                    position: relative; 
+                    &::after {
+                        content: '\f00c'; 
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900; 
+                        position: absolute;
+                        bottom: 20px; 
+                        right: 0;
+                        background-color: #327DF9; 
+                        color: #fff;
+                        font-size: 12px;
+                        border-radius: 50%;
+                        width: 22px; 
+                        height: 22px;
+                        line-height: 22px;
+                    }
+                }
+                img {
+                    width: auto;
+                    max-width: 100%;
+                    display: inline-block; 
+                    border-radius: 50%;
+                }
+            }
+            .seller-name {
+                margin-top: 15px;
+                h6 {
+                    transition: $transition; 
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+            .earning-amount {
+                margin-top: 3px;
+                span {
+                    font-size: 14px;
+                }
+            }
+            .social-profiles {
+                margin-top: 15px;
+                a {
+                    width: 30px; 
+                    height: 30px; 
+                    background-color: transparent; 
+                    border: 1px solid $paragraph-color;
+                    display: inline-block;
+                    border-radius: 50%;
+                    line-height: 30px;
+                    color: $paragraph-color;
+                    transition: 0.3s;
+                    + a {
+                        margin-left: 3px;
+                    }
+                    &:hover {
+                        background-color: $primary-color;
+                        color: #fff;
+                        border: 1px solid $primary-color;
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+                border-color: transparent;
+            }
+        }
+        .nft-btn-style-3 {
+            margin-top: 40px;
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 400px;
+        }
+        .authors-filter {
+            .authors-filter-left {
+                text-align: center;
+            }
+            .authors-filter-search {
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+
+
+
+/******************** Author Details *******************/ 
+.author-details {
+    .profile-info {
+        text-align: center;
+        margin-top: -140px;
+        max-width: 711px;
+        margin-left: auto; 
+        margin-right: auto;
+		padding: 0 15px;
+        .profile-thumb {
+            display: inline-block;
+            position: relative;
+            &::after {
+                content: '\f00c';
+                font-family: 'Font Awesome 5 Free'; 
+                font-weight: 900;
+                position: absolute; 
+                bottom: 60px; 
+                right: 0; 
+                width: 40px; 
+                height: 40px; 
+                background-color: #327DF9;
+                border-radius: 50%; 
+                color: #fff;
+                line-height: 40px; 
+                text-align: center;
+            }
+            img {
+                border-radius: 50%;
+            }
+        }
+        .profile-title {
+            h3 {
+                font-weight: 600;
+            }
+            span {
+                margin-top: 6px;
+                display: block;
+                strong {
+                    font-weight: 500;
+                }
+            }
+        }
+        .profile-desc {
+            margin-top: 30px;
+        }
+        .profile-follow {
+            margin-top: 15px;
+            .follower-txt {
+                display: inline-block;
+                p {
+                    font-size: 18px; 
+                    font-weight: 500;
+                    color: $heading-color;
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .follow-btn {
+                display: inline-block;
+                margin-left: 20px;
+                .dropdown {
+                    & > button {
+                        border: 1px solid #CECECE;
+                        border-radius: 3px;
+                        padding: 4px 17px;
+                        color: $paragraph-color;
+                    }
+                    .dropdown-menu {
+                        border: 0;
+                        border-radius: 4px;
+                        background-color: #fff;
+                        box-shadow: 10px 20px 30px rgba(0,0,0,0.08);
+                        ul {
+                            li {
+                                + li {
+                                    border-top: 1px solid #cecece94;
+                                }
+                                button {
+                                    padding: 10px 15px;
+                                    transition: $transition; 
+                                    &:hover {
+                                        color: $primary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        .profile-info {
+            margin-top: -90px;
+            .profile-thumb {
+                max-width: 200px;
+            }
+        }
+    }
+    @include small-screen {
+        .profile-info {
+            margin-top: -50px;
+            .profile-thumb {
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+/********** Author's NFTs **************/ 
+.authors-nft {
+    padding-top: 70px;
+    .filter-tab {
+        ul {
+            display: block;
+            overflow: hidden;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #CECECE;
+            li {
+                float: left;
+                margin-right: 10px;
+                button {
+                    color: $paragraph-color;
+                    font-size: 18px; 
+                    font-weight: 500;
+                    &.active {
+                        color: $heading-color;
+                    }
+                    i {
+                        margin-left: 6px;
+                    }
+                }
+                &:last-child {
+                    float: right;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .nft-items-list {
+        margin-top: 40px;
+        .nft-auction-item {
+            overflow: hidden;
+            transition: $transition; 
+            margin-bottom: 30px;
+            .img-wrapper {
+                overflow: hidden;
+                img {
+                    transition: $transition;
+                }
+            }
+            .auction-content {
+                border: 1px solid #CECECE;
+                border-top: 0;
+                padding: 25px 20px 20px 20px;
+                transition: $transition;
+                border-radius: 0 0 6px 6px;
+                .auction-title {
+                    display: flex; 
+                    align-items: center;
+                    justify-content: space-between;
+                    h4 {
+                        transition: $transition; 
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                    .auction-category {
+                        color: $heading-color;
+                        font-weight: 600;
+                    }
+                }
+                .user-artist {
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .auction-user {
+                        display: flex; 
+                        align-items: center;
+                        .user-thumb {
+                            img {
+                                border-radius: 50%;
+                            }
+                        }
+                        .user-tagline {
+                            margin-left: 10px;
+                            font-weight: 500;
+                            color: $heading-color;
+                        }
+                    }
+                    .auction-clock {
+                        ul {
+                            background-color: $primary-color; 
+                            display: inline-block;
+                            border-radius: 4px; 
+                            padding: 8px 12px;
+                            color: #fff;
+                            li {
+                                display: inline-block;
+                                &.timer-clock {
+                                    position: relative; 
+                                    margin-right: 8px;
+                                    transform: translateY(-2px);
+                                    &::after {
+                                        content: ''; 
+                                        position: absolute; 
+                                        width: 1px; 
+                                        height: 15px; 
+                                        background-color: #fff;
+                                        right: -8px;
+                                        top: calc(50% + 2px); 
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .auction-meta {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                    .bid-amount {
+                        span {
+                            display: block;
+                            &.currency-amount {
+                                font-weight: 600;
+                                color: $heading-color;
+                            }
+                        }
+                    }
+                    .auction-like {
+                        align-self: flex-end;
+                        a {
+                            display: inline-block;
+                            cursor: pointer;
+                            color: $paragraph-color;
+                            i {
+                                margin-right: 4px;
+                                color: transparent;
+                                -webkit-text-stroke-width: 1px;
+                                -webkit-text-stroke-color: $paragraph-color;
+                            }
+                            &:hover {
+                                i {
+                                    color: $primary-color;
+                                    -webkit-text-stroke-color: $primary-color;
+                                }
+                            }
+                            &:focus {
+                                i {
+                                    color: $primary-color;
+                                    -webkit-text-stroke-color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                .img-wrapper {
+                    img {
+                        transform: scale(1.05) rotate(1deg);
+                    }
+                }
+                .auction-content {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+    }
+    @include small-screen {
+        .container {
+            max-width: 600px;
+        }
+    }
+    @include portrait-phone {
+        .filter-tab {
+            ul {
+                text-align: center;
+                li {
+                    float: none;
+                    display: inline-block;
+                    &:last-child {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+}

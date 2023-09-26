@@ -1,0 +1,169 @@
+/*************** Contact Page ***************/ 
+.contact-form-area {
+    .contact-form {
+        .img-wrapper {
+            padding-right: 15px;
+        }
+        .input-field-wrapper {
+            .form-title {
+                margin-bottom: 30px;
+                h6 {
+                    font-weight: 600;
+                }
+            }
+            label {
+                display: block;
+                font-weight: 500;
+                color: #232323;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+                input {
+                    display: block;
+                    width: 100%;
+                    padding: 18px 20px;
+                    border: 1px solid #D4D4D4;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                    &::placeholder {
+                        text-transform: capitalize;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    input {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .form-message-wrapper {
+            padding-left: 15px;
+            label {
+                display: block;
+                font-weight: 500;
+                color: #232323;
+                margin-bottom: 10px;
+                text-transform: capitalize;
+            }
+            textarea {
+                display: block;
+                width: 100%;
+                padding: 12px 20px;
+                border: 1px solid #D4D4D4;
+                border-radius: 4px;
+                font-size: 14px;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                &::placeholder {
+                    text-transform: default;
+                }
+            }
+            button {
+                margin-top: 10px;
+                padding-top: 19px; 
+                padding-bottom: 19px;
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+        .contact-form {
+            .form-message-wrapper {
+                margin-top: 40px;
+                padding-left: 0;
+            }
+        }
+    }
+    @include small-screen {
+        .container {
+            max-width: 600px;
+        }
+        .contact-form {
+            .img-wrapper {
+               padding-right: 0;
+               margin-bottom: 40px;
+            }
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 500px;
+        }
+    }
+}
+
+
+/********** Contact Details ***********/ 
+.contact-details {
+    padding-top: 70px;
+    .contact-column {
+        border: 1px solid #cecece;
+        border-radius: 4px;
+        padding: 45px 30px 55px 55px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+        background-color: #fff;
+        position: relative;
+        z-index: 10;
+        margin-bottom: 30px;
+        .column-top {
+            display: flex; 
+            align-items: center;
+            .icon-wrapper {
+                span {
+                    width: 60px; 
+                    height: 60px; 
+                    background-color: #FBE4E1; 
+                    display: inline-block;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 57px;
+                }
+            }
+            .column-title {
+                margin-left: 20px;
+            }
+        }
+        .column-content {
+            margin-top: 20px;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+    }
+    @include small-screen {
+        .container {
+            max-width: 600px;
+        }
+        .contact-column {
+            padding: 30px 20px 35px 35px;
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 500px;
+        }
+    }
+}
+
+.google-map-frame {
+    margin-top: -100px;
+    iframe {
+        width: 100%;
+        height: 560px;
+        display: inherit;
+    }
+    @include portrait-phone {
+        iframe {
+            height: 400px;
+        }
+    }
+}

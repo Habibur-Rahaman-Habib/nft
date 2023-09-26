@@ -1,0 +1,112 @@
+// Responsive Breakpoint
+
+@mixin screen-382() {
+    @media (max-width: 382px) {
+        @content;
+    }
+}
+@mixin screen-400() {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin portrait-phone() {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+@mixin landscape-phone() {
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        @content;
+    }
+}
+@mixin screen-650() {
+    @media (max-width: 650px) {
+        @content;
+    }
+}
+
+@mixin screen-500() {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin small-screen() {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin medium-screen() {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+
+@mixin ipadpro() {
+    @media (max-width: 1024.98px) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin large-screen() {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin screen-1170() {
+    @media (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin screen-1200() {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin screen-1440() {
+    @media (min-width: 1440px) and (max-width: 1599.98px) {
+        @content;
+    }
+}
+@mixin screen-1600() {
+    @media (min-width: 1600px) and (max-width: 1919.98px) {
+        @content;
+    }
+}
+
+@mixin screen-1800() {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}
+
+@mixin screen-1550() {
+    @media (max-width: 1550px) {
+        @content;
+    }
+}
+
+@mixin screen-1350() {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}
+

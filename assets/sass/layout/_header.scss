@@ -1,0 +1,441 @@
+/* Header Section */
+.nft-header-area {
+    transition: $transition;
+    .nft-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        nav {
+            text-align: right;
+            margin-left: 60px;
+            ul {
+                li {
+                    display: inline-block; 
+                    position: relative;
+                    a {
+                        color: #fff;
+                        font-size: 18px; 
+                        font-weight: 600;
+                        padding: 30px 20px;
+                        display: block;
+                        text-transform: capitalize;
+                        position: relative;
+                        transition: $transition;
+                    }
+                    &.has-submenu {
+                        & > a {
+                            &::after {
+                                content: '\f107'; 
+                                font-family: "Font Awesome 5 Free"; 
+                                font-weight: 900;
+                                position: absolute; 
+                                right: 0px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        a {
+                            color: $primary-color;
+                        }
+                    }
+                    &.has-submenu {
+                        ul {
+                            position: absolute;
+                            top: 90px; 
+                            left: 0;
+                            min-width: 220px; 
+                            background-color: #fff;
+                            z-index: 10;
+                            border-radius: 4px;
+                            text-align: left;
+                            opacity: 0; 
+                            visibility: hidden;
+                            transition: $transition;
+                            box-shadow: 10px 20px 30px rgba(0,0,0,0.05);
+                            li {
+                                display: block;
+                                + li {
+                                    a {
+                                        border-top: 1px solid rgba(0,0,0,0.1);
+                                    }
+                                }
+                                a {
+                                    display: block;
+                                    color: $heading-color;
+                                    padding: 10px 15px;
+                                }
+                                &:hover {
+                                    & > a {
+                                        color: $primary-color;
+                                    }
+                                }
+                                &.has-submenu {
+                                    & > a {
+                                        &::after {
+                                            transform: rotate(-90deg);
+                                            right: 15px;
+                                        }
+                                    }
+                                    ul {
+                                        left: 100%;
+                                        top: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover {
+                            & > ul {
+                                top: 85px; 
+                                opacity: 1; 
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .nft-header-search {
+            margin-left: 70px;
+            text-align: right;
+            padding-right: 10px;
+            button {
+                svg {
+                    fill: #fff;
+                    transition: $transition;
+                }
+                &:hover {
+                    svg {
+                        fill: $primary-color;
+                    }
+                }
+            }
+            .dropdown-menu {
+                top: 10px !important;
+                left: -250px !important;
+            }
+            .search-form {
+                background-color: $heading-color;
+                padding: 15px 20px;
+                box-shadow: 10px 20px 30px rgba(0,0,0,0.1);
+                form {
+                    width: 100%; 
+                    input[type='text'] {
+                        padding: 6px 12px;
+                        background-color: transparent;
+                        border: 1px solid rgba(255,255,255,0.3);
+                        border-radius: 4px 0 0 4px;
+                        color: $paragraph-color;
+                        &::placeholder {
+                            color: $paragraph-color;
+                        }
+                    }
+                    input[type='submit'] {
+                        padding: 6px 12px;
+                        border: 1px solid $primary-color;
+                        border-radius: 0 4px 4px 0;
+                        text-transform: capitalize;
+                        background-color: $primary-color;
+                        color: #fff;
+                        transition: $transition;
+                        &:hover {
+                            background-color: $secondary-color;
+                            border-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nft-header-btn {
+        text-align: right;
+        position: relative; 
+        &::before {
+            content: ''; 
+            position: absolute; 
+            top: 50%; 
+            left: -18px; 
+            transform: translateY(-50%);
+            width: 1px; 
+            height: 40px; 
+            background-color: #6581AB;
+            @include ipadpro {
+                display: none;
+            }
+        }
+        a {
+            display: inline-block; 
+            padding: 20px 30px;
+            color: #fff; 
+            background-color: $secondary-color;
+            border-radius: 4px;
+            font-weight: 600; 
+            font-size: 16px;
+            text-transform: capitalize;
+            position: relative; 
+            overflow: hidden;
+            vertical-align: middle;
+            z-index: 1;
+            &::before {
+                content: ''; 
+                position: absolute; 
+                right: 0; 
+                top: 0; 
+                width: 100%; 
+                height: 0;
+                background-color: $primary-color;
+                z-index: -1;
+                transition: $transition;
+            }
+            &:hover {
+                &::before {
+                    height: 100%;
+                    bottom: 0; 
+                    top: auto;
+                }
+            }
+        }
+    }
+    .mobile-header {
+        display: none;
+        .nft-header-btn {
+            .search-form {
+                background-color: $heading-color;
+                padding: 15px 20px;
+                box-shadow: 10px 20px 30px rgba(0,0,0,0.1);
+                form {
+                    width: 100%; 
+                    input[type='text'] {
+                        padding: 6px 12px;
+                        background-color: transparent;
+                        border: 1px solid rgba(255,255,255,0.3);
+                        border-radius: 4px 0 0 4px;
+                        color: $paragraph-color;
+                        &::placeholder {
+                            color: $paragraph-color;
+                        }
+                    }
+                    input[type='submit'] {
+                        padding: 6px 12px;
+                        border: 1px solid $primary-color;
+                        border-radius: 0 4px 4px 0;
+                        text-transform: capitalize;
+                        background-color: $primary-color;
+                        color: #fff;
+                        transition: $transition;
+                        &:hover {
+                            background-color: $secondary-color;
+                            border-color: $secondary-color;
+                        }
+                    }
+                }
+            }
+            .mobile-menu-open {
+                vertical-align: middle;
+                margin-left: 25px;
+                background-color: $primary-color;
+                padding: 13px;
+                border-radius: 4px;
+                span {
+                    width: 35px; 
+                    height: 2px; 
+                    background-color: #fff; 
+                    display: block;
+                    transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
+                    + span {
+                        margin-top: 10px;
+                    }
+                }
+                &.active {
+                    span {
+                        &:first-child {
+                            transform: rotate(45deg) translate(6px, 7px);
+                        }
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+                        &:nth-child(3) {
+                            transform: rotate(-45deg) translate(10px, -10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include large-screen {
+        .nft-navigation {
+            justify-content: flex-end;
+            nav {
+                margin-left: 0;
+            }
+            .nft-header-search {
+                padding-right: 0;
+            }
+        }
+    }
+    @include screen-1170 {
+        .nft-logo {
+            a {
+                max-width: 220px;
+                display: inline-block;
+            }
+        }
+        .nft-navigation {
+            .nft-header-search {
+                margin-left: 40px;
+            }
+        }
+        .nft-header-btn {
+            a {
+                padding: 15px 25px;
+                font-size: 15px;
+            }
+        }
+    }
+    @include ipadpro {
+        .desktop-header {
+            display: none;
+        }
+        .mobile-header {
+            display: flex;
+            .nft-header-btn {
+                a {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+    }
+    @include small-screen {
+        .mobile-header {
+            .nft-header-btn {
+                a {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 500px;
+        }
+    }
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    background-color: $heading-color;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    animation: 0.3s fadeInDown;
+    @include ipadpro {
+        position: relative;
+        background-color: transparent;
+    }
+}
+
+
+/********************* Mobile Menu ********************/ 
+.nft-mobile-menu {
+    position: fixed; 
+    width: 260px;
+    height: 100vh;
+    overflow-y: scroll;
+    top: 0; 
+    left: -280px;
+    background-color: #fff;
+    padding: 30px 0;
+    z-index: 110;
+    transition: $transition;
+    box-shadow: 20px 10px 30px rgba(0,0,0,0.1);
+    .mobile-menu-logo {
+        width: 200px;
+        display: block;
+        margin-left: 13px;
+    }
+    ul {
+        margin-top: 40px;
+        li {
+            display: block; 
+            a {
+                display: block;
+                padding: 8px 8px 8px 15px; 
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                font-weight: 500;
+                color: $heading-color;
+                text-transform: capitalize;
+            }
+            &.has-submenu {
+                position: relative;
+                & > a {
+                    position: relative; 
+                    &::after {
+                        content: '+';
+                        position: absolute; 
+                        top: 6px;
+                        right: 10px;
+                        background-color: $border-color;
+                        width: 25px;
+                        height: 25px; 
+                        text-align: center; 
+                        line-height: 25px;
+                        border-radius: 2px;
+                        cursor: pointer;
+                    }
+                }
+                ul {
+                    margin-top: 0;
+                    display: none;
+                    li {
+                        a {
+                            padding-left: 25px;
+                        }
+                        &.has-submenu {
+                            ul {
+                                li {
+                                    a {
+                                        padding-left: 35px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search-form {
+        margin-top: 30px;
+        padding: 0 15px;
+        form {
+            width: 100%;
+            position: relative;
+            input {
+                width: 100%;
+                padding: 6px 12px;
+                border-radius: 4px; 
+                border: 1px solid #DEDEDE;
+            }
+            button {
+                position: absolute; 
+                right: 0; 
+                top: 50%; 
+                transform: translateY(-50%);
+                background-color: $primary-color; 
+                color: #fff;
+                padding: 6px 12px;
+                border-radius: 0 4px 4px 0;
+            }
+        }
+    }
+}
+
+.mobile-menu-active {
+    left: 0; 
+}

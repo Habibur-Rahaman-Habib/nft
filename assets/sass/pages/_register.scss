@@ -1,0 +1,259 @@
+/**************** Register Form *************/ 
+.register-area {
+    padding: 115px 0;
+    position: relative; 
+    .account-bg {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        background-size: cover; 
+        background-repeat: no-repeat;
+    }
+    .account-md-bg {
+        display: none;
+    }
+    .container {
+        position: relative;
+    }
+    .graphic-shape {
+        position: absolute;
+        left: -200px; 
+        bottom: -80px;
+    }
+    .register-form {
+        overflow: hidden;
+        max-width: 515px;
+        .form-title {
+            h2 {
+                font-size: 44px;
+            }
+        }
+        .form-subtitle {
+            margin-top: 15px;
+        }
+        form {
+            margin-top: 30px;
+            label {
+                display: block;
+                font-weight: 500;
+                color: #232323;
+                margin-bottom: 10px;
+                input {
+                    display: block;
+                    width: 100%;
+                    padding: 15px 20px;
+                    border: 1px solid #D4D4D4;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                    &::placeholder {
+                        text-transform: capitalize;
+                    }
+                }
+                input[type="password"] {
+                    font-family: 'Font Awesome 5 Free'; 
+                    font-weight: 900;
+                    &::placeholder {
+                        font-size: 6px;
+                        letter-spacing: 0.8em;
+                        color: $paragraph-color;
+                        opacity: 0.8;
+                    }
+                }
+                &.checkbox-wrapper {
+                    display: inline-block;
+                    width: 100%;
+                    a {
+                        float: right;
+                        color: #232323; 
+                        transition: $transition; 
+                        transform: translateY(4px);
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+                input[type="checkbox"] {
+                    display: inline-block;
+                    width: auto;
+                    margin-right: 10px;
+                    transform: translateY(1.5px);
+                }
+            }
+            input[type="submit"] {
+                background-color: $primary-color;
+                display: block;
+                width: 100%;
+                border: 0;
+                border-radius: 4px;
+                padding: 15px 0;
+                color: #fff;
+                text-transform: capitalize; 
+                font-weight: 600;
+                margin-top: 10px;
+                transition: $transition;
+                &:hover {
+                    background-color: rgba(244, 70, 46, 0.7);
+                }
+            }
+        }
+        .form-devider {
+            text-align: center;
+            margin: 25px 0;
+            span {
+                display: inline-block;
+                font-weight: 500;
+                color: #141420;
+                font-size: 14px;
+                position: relative; 
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: calc(100% + 25px); 
+                    top: 11px;
+                    width: 300px; 
+                    height: 1px;
+                    background-color: #D4D4D4;
+                }
+                &::after {
+                    content: ''; 
+                    position: absolute; 
+                    right: calc(100% + 25px); 
+                    top: 11px;
+                    width: 300px; 
+                    height: 1px;
+                    background-color: #D4D4D4;
+                }
+            }
+        }
+        .social-signup {
+            display: flex;
+            align-items: center;
+            a {
+                display: inline-block;
+                padding: 18px 30px;
+                color: #fff;
+                font-size: 14px; 
+                font-weight: 500;
+                border-radius: 5px;
+                width: 50%;
+                text-align: center;
+                span {
+                    width: 26px; 
+                    height: 26px; 
+                    border-radius: 50%; 
+                    display: inline-block;
+                    text-align: center; 
+                    line-height: 26px;
+                    margin-right: 10px;
+                }
+                &.facebook-signup {
+                    background-color: $facebook;
+                    margin-right: 20px;
+                    span {
+                        background-color: #648FE4;
+                    }
+                }
+                &.twitter-signup {
+                    background-color: $twitter; 
+                    span {
+                        background-color: #4DC0FB;
+                    }
+                }
+            }
+        }
+        .login-btn {
+            margin-top: 32px;
+            text-align: center;
+            p {
+                font-weight: 500;
+                a {
+                    color: $primary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @include large-screen {
+        .register-form {
+            max-width: calc(100% - 30px);
+        }
+    }
+    @include medium-screen {
+        padding-top: 0;
+        .account-bg {
+            display: none;
+        }
+        .account-md-bg {
+            display: block;
+            margin-bottom: 100px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .register-form {
+            max-width: 100%;
+        }
+    }
+    @include portrait-phone {
+        .register-form {
+            .social-signup {
+                flex-direction: column;
+                a {
+                    width: 100%;
+                    &.facebook-signup {
+                        margin-right: 0;
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/************ Login Area ************/
+.login-area {
+    padding: 230px 0;
+    @include medium-screen {
+        padding: 0 0 100px 0;
+    }
+}
+
+/************ 404 Area ************/ 
+.not-found-content {
+    padding: 335px 0;
+    .graphic-shape {
+        bottom: -300px;
+    }
+    .not-found-content-wrapper {
+        h1 {
+            font-size: 150px;
+            font-weight: 600;
+        }
+        h3 {
+            font-weight: 600;
+        }
+        p {
+            margin-top: 20px;
+        }
+        a {
+            margin-top: 20px;
+            border-radius: 30px;
+            text-transform: initial;
+        }
+    }
+    @include medium-screen {
+        padding: 0 0 120px 0;
+        .not-found-content-wrapper {
+            text-align: center;
+        }
+        .graphic-shape {
+            bottom: -100px;
+            left: 70px;
+        }
+    }
+}

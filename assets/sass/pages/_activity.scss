@@ -1,0 +1,208 @@
+.activity-area {
+    .activity-filter {
+        .filter-nav {
+            ul {
+                border: 1px solid $paragraph-color;
+                border-radius: 4px;
+                li {
+                    display: inline-block;
+                    button {
+                        padding: 24px 50px;
+                        display: inline-block;
+                        font-size: 18px; 
+                        font-weight: 600;
+                        color: $heading-color;
+                        position: relative;
+                        transition: $transition;
+                        &.active {
+                            &::before {
+                                content: ''; 
+                                position: absolute; 
+                                left: 1px; 
+                                bottom: -1px;
+                                width: 100%;
+                                height: 3px;
+                                background-color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .filter-content {
+            margin-top: 40px;
+            .tab-content {
+                .tab-pane {
+                    background-color: $heading-color;
+                    padding: 50px;
+                    border-radius: 4px;
+                    .activity-item {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        + .activity-item {
+                            margin-top: 40px;
+                            &::before {
+                                content: ''; 
+                                position: absolute; 
+                                width: calc(100% - 105px); 
+                                height: 1px; 
+                                background-color: #9E9EAA;
+                                top: -20px; 
+                                left: 105px;
+                            }
+                        }
+                        .featured-img {
+                            width: 18%;
+                            img {
+                                border-radius: 5px;
+                            }
+                        }
+                        .activity-content {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            width: 100%;
+                            .activity-left {
+                                margin-left: 15px;
+                                h4 {
+                                    color: #fff;
+                                    font-weight: 500;
+                                    transition: $transition; 
+                                    &:hover {
+                                        color: $primary-color;
+                                    }
+                                }
+                                span {
+                                    font-size: 18px;
+                                    color: #9E9EAA;
+                                    display: block;
+                                    margin-top: 15px;
+                                    strong {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .activity-sidebar {
+        .sidebar-title {
+            h4 {
+                font-weight: 600;
+            }
+        }
+        .activity-tag {
+            margin-top: 30px;
+            a {
+                padding: 12px 29px;
+                display: inline-block;
+                border: 1px solid $paragraph-color;
+                border-radius: 4px;
+                color: $paragraph-color;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                margin-right: 6px;
+                transition: $transition; 
+                &:hover {
+                    background-color: $primary-color;
+                    color: #fff;
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+    @include large-screen {
+        .activity-filter {
+            .filter-nav {
+                ul {
+                    li {
+                        button {
+                            padding: 20px 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        .container {
+            max-width: 800px;
+        }
+        .activity-sidebar {
+            margin-top: 60px;
+        }
+    }
+
+    @include small-screen {
+        .container {
+            max-width: 680px;
+        }
+        .activity-filter {
+            .filter-nav {
+                ul {
+                    justify-content: center;
+                }
+            }
+            .filter-content {
+                .tab-content {
+                    .tab-pane {
+                        padding: 50px 20px 10px 25px;
+                        text-align: center;
+                        .activity-item {
+                            display: inline-block;
+                            text-align: center;
+                            margin-bottom: 40px;
+                            + .activity-item {
+                                margin-top: 0;
+                            }
+                            .featured-img {
+                                display: inline-block; 
+                                width: auto;
+                            }
+                            .activity-content {
+                                display: inline-block;
+                                .activity-left {
+                                    margin-left: 0;
+                                    margin-top: 20px;
+                                    span {
+                                        margin-top: 8px;
+                                    }
+                                }
+                                .activity-timing {
+                                    margin-top: 10px;
+                                }
+                            }
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include portrait-phone {
+        .container {
+            max-width: 480px;
+        }
+    }
+    @include screen-500 {
+        .activity-filter {
+            .filter-nav {
+                ul {
+                    justify-content: center;
+                    li {
+                        button {
+                            padding: 15px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,53 @@
+/********** Explore Artwork *********/ 
+.explore-artwork {
+    background-color: #fff;
+    .nft-artwork-filter {
+        margin-top: 0;
+        .filter-btns {
+            .filter-box {
+                display: inline-block;
+                margin-right: 6px;
+                .nice-select {
+                    background-color: #292934;
+                    border: 0;
+                    color: #fff;
+                    height: auto;
+                    padding: 6px 45px 6px 30px;
+                    min-width: 190px;
+                    text-align: center;
+                    .current {
+                        font-size: 16px; 
+                        font-weight: 500;
+                        font-family: $primary-font;
+                    }
+                    ul {
+                        background-color: #292934;
+                        li {
+                            background-color: #292934;
+                        }
+                    }
+                }
+                &:last-child {
+                    float: right;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .nft-auction-item {
+        box-shadow: 10px 20px 30px rgba(0,0,0,0.07);
+    }
+    @include medium-screen {
+        .nft-artwork-filter {
+            .filter-btns {
+                text-align: center;
+                .filter-box {
+                    margin-bottom: 15px;
+                    &:last-child {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+}
